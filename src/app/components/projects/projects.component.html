@@ -1,0 +1,23 @@
+<section class="projects">
+    <h2>Mes Projets</h2>
+    <div class="projects-grid">
+        @for (project of projects; track $index) {
+      <mat-card >
+        <mat-card-header>
+          <mat-card-title>{{project.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{project.description}}</p>
+          <mat-divider></mat-divider>
+          <div class="tech-stack">
+            <mat-chip-listbox>
+                @for ( tech of project.technologies; track $index) {
+              <mat-chip >{{tech}}</mat-chip>}
+            </mat-chip-listbox>
+          </div>
+          <mat-divider></mat-divider>
+          <p class="role"><strong>Rôle:</strong> {{project.role}}</p>
+        </mat-card-content>
+      </mat-card>}
+    </div>
+  </section>

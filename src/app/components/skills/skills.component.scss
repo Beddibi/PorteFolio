@@ -1,0 +1,21 @@
+.skills {
+    padding: 2rem;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1a237e;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .skill-item {
+    margin: 1rem 0;
+  }
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }

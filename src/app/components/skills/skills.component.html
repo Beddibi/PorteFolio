@@ -1,0 +1,21 @@
+<section class="skills">
+    <h2>Compétences Techniques</h2>
+    <div class="skills-grid">
+        @for (category of skills; track $index) {
+      <mat-card >
+        <mat-card-header>
+          <mat-card-title>{{category.category}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            @for (item of category.items; track $index) {
+          <div class="skill-item" >
+            <div class="skill-header">
+              <span>{{item.name}}</span>
+              <span>{{item.level}}%</span>
+            </div>
+            <mat-progress-bar mode="determinate" [value]="item.level"></mat-progress-bar>
+          </div>}
+        </mat-card-content>
+      </mat-card>}
+    </div>
+  </section>

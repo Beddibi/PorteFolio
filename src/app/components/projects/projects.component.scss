@@ -1,0 +1,22 @@
+.projects {
+    padding: 2rem;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1a237e;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .tech-stack {
+    margin: 1rem 0;
+  }
+  .role {
+    margin-top: 1rem;
+  }
+  mat-card {
+    height: 100%;
+  }

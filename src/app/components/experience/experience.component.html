@@ -1,0 +1,18 @@
+<section class="experience">
+    <h2>Expérience Professionnelle</h2>
+    <div class="timeline">
+        @for (exp of experiences; track $index) {
+      <mat-card  class="experience-card">
+        <mat-card-header>
+          <mat-card-title>{{exp.title}}</mat-card-title>
+          <mat-card-subtitle>{{exp.company}} | {{exp.period}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <ul>
+            @for (desc of exp.description; track $index) {
+            <li>{{desc}}</li>}
+          </ul>
+        </mat-card-content>
+      </mat-card>}
+    </div>
+  </section>
