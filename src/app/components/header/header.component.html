@@ -1,11 +1,35 @@
-<mat-toolbar color="primary" class="header">
-    <a mat-button routerLink="/">Mohammed Beddibi</a>
-    <span class="spacer"></span>
-    <nav>
-      <a mat-button routerLink="/about" routerLinkActive="active">À propos</a>
-      <a mat-button routerLink="/skills" routerLinkActive="active">Compétences</a>
-      <a mat-button routerLink="/experience" routerLinkActive="active">Expérience</a>
-      <a mat-button routerLink="/projects" routerLinkActive="active">Projets</a>
-      <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-    </nav>
-  </mat-toolbar>
+
+    <mat-toolbar [class.scrolled]="isScrolled" class="header">
+      <div class="toolbar-content">
+        <a class="logo" routerLink="/">
+          <span class="logo-text">MB</span>
+          <span class="full-name">Mohammed Beddibi</span>
+        </a>
+        <span class="spacer"></span>
+        <nav [class.mobile-nav]="isMobileMenuOpen">
+          <a mat-button routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()">
+            <mat-icon>person_outline</mat-icon>
+            <span>À propos</span>
+          </a>
+          <a mat-button routerLink="/skills" routerLinkActive="active" (click)="closeMobileMenu()">
+            <mat-icon>code</mat-icon>
+            <span>Compétences</span>
+          </a>
+          <a mat-button routerLink="/experience" routerLinkActive="active" (click)="closeMobileMenu()">
+            <mat-icon>work_outline</mat-icon>
+            <span>Expérience</span>
+          </a>
+          <a mat-button routerLink="/projects" routerLinkActive="active" (click)="closeMobileMenu()">
+            <mat-icon>folder_open</mat-icon>
+            <span>Projets</span>
+          </a>
+          <a mat-button routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">
+            <mat-icon>mail_outline</mat-icon>
+            <span>Contact</span>
+          </a>
+        </nav>
+        <button mat-icon-button class="mobile-menu-button" (click)="toggleMobileMenu()">
+          <mat-icon>{{ isMobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>

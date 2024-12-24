@@ -1,17 +1,95 @@
 <section class="contact">
-    <h2>Contact</h2>
-    <mat-card>
-      <mat-card-content>
-        <div class="contact-info">
-          <div class="contact-item">
-            <mat-icon>phone</mat-icon>
-            <a href="tel:0681784957">06.81.78.49.57</a>
+    <div class="contact-header">
+      <h2>Contactez-moi</h2>
+      <p class="subtitle">N'hésitez pas à me contacter pour discuter de vos projets</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Carte des informations principales -->
+      <mat-card class="contact-card info-card">
+        <mat-card-content>
+          <h3>Informations de contact</h3>
+          
+          <div class="contact-items">
+            <a href="tel:0681784957" class="contact-item">
+              <div class="icon-wrapper">
+                <mat-icon>phone</mat-icon>
+              </div>
+              <div class="contact-details">
+                <h4>Téléphone</h4>
+                <span>06.81.78.49.57</span>
+              </div>
+            </a>
+
+            <a href="mailto:sbeddibi.mohamed@gmail.com" class="contact-item">
+              <div class="icon-wrapper">
+                <mat-icon>email</mat-icon>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <span>sbeddibi.mohamed&#64;gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mohammed-beddibi" target="_blank" class="contact-item">
+              <div class="icon-wrapper">
+                
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <span>mohammed-beddibi</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/beddibi" target="_blank" class="contact-item">
+              <div class="icon-wrapper">
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <span>Voir mes projets</span>
+              </div>
+            </a>
           </div>
-          <div class="contact-item">
-            <mat-icon>email</mat-icon>
-            <a href="mailto:sbeddibi.mohamed&#64;gmail.com">sbeddibi.mohamed&#64;gmail.com</a>
-          </div>
-        </div>
-      </mat-card-content>
-    </mat-card>
+        </mat-card-content>
+      </mat-card>
+
+      <!-- Carte du formulaire de contact -->
+      <mat-card class="contact-card form-card">
+        <mat-card-content>
+          <h3>Envoyez-moi un message</h3>
+          
+          <form class="contact-form">
+            <mat-form-field appearance="outline">
+              <mat-label>Nom complet</mat-label>
+              <input matInput placeholder="Votre nom">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="votre@email.com" type="email">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Sujet</mat-label>
+              <mat-select>
+                <mat-option value="collaboration">Proposition de collaboration</mat-option>
+                <mat-option value="job">Opportunité d'emploi</mat-option>
+                <mat-option value="project">Projet freelance</mat-option>
+                <mat-option value="other">Autre</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Message</mat-label>
+              <textarea matInput rows="4" placeholder="Votre message"></textarea>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="submit-button">
+              <mat-icon>send</mat-icon>
+              Envoyer le message
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </section>

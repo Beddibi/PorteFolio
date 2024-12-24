@@ -28,8 +28,9 @@ export class SkillsComponent {
       items: [
         {name: 'JavaScript', level: 90},
         {name: 'TypeScript', level: 85},
-        {name: 'Java', level: 80},
-        {name: 'C#', level: 75}
+        {name: 'C#', level: 80},
+        {name: 'Java', level: 60},
+       
       ]
     },
     {
@@ -46,7 +47,8 @@ export class SkillsComponent {
       items: [
         {name: 'MongoDB', level: 85},
         {name: 'SQL Server', level: 80},
-        {name: 'Firebase', level: 75}
+        {name: 'Firebase', level: 75},
+        {name:'MySQL',level:60}
       ]
     }
   ];
